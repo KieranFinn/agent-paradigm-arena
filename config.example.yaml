@@ -3,7 +3,7 @@
 
 llm:
   base_url: https://api.deepseek.com
-  model: deepseek-chat
+  model: deepseek-flash
   temperature: 0
   max_tokens: 4096
   request_timeout_s: 180
@@ -13,8 +13,8 @@ llm:
   price_output: 8.0
 
 models:
-  main: deepseek-chat
-  strong: deepseek-reasoner
+  main: deepseek-flash
+  strong: deepseek-v4-pro
 
 defaults:
   repeats: 10
