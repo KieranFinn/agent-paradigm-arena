@@ -9,3 +9,4 @@ runs/_merged/*
 !runs/_merged/report.csv
 .DS_Store
 .venv/
+*.log
