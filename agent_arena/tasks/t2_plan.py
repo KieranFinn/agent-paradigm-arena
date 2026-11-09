@@ -322,33 +322,41 @@ class T2PlanTask(TaskBase):
 
     # -- evaluation -------------------------------------------------------------
     @staticmethod
-    def _extract_value(answer: str) -> Optional[float]:
-        """Last-line-first numeric extraction with percent normalization."""
+    def _extract_values(answer: str) -> List[float]:
+        """All plausible metric values in the answer, priority-ordered.
+
+        Priority: numbers from the FIRST non-empty line (the headline) come
+        first, then everything else.  Each raw number contributes its plain
+        value and, when 1 < v <= 100, its percent interpretation (v/100).
+        Verbose agents append markdown tables full of raw figures; requiring
+        the headline value would mis-grade them, so matching checks the full
+        prioritized candidate list.
+        """
         if not answer:
-            return None
-        lines = [ln for ln in (answer or "").splitlines() if ln.strip()]
-        candidates: List[float] = []
+            return []
+        lines = [ln for ln in answer.splitlines() if ln.strip()]
+        ordered_nums: List[float] = []
+        seen = set()
 
-        def _nums(text: str) -> List[float]:
-            return [float(x) for x in re.findall(r"-?\d+(?:\.\d+)?", text)]
+        def _add_from(text: str) -> None:
+            for v in re.findall(r"-?\d+(?:\.\d+)?", text):
+                v = float(v)
+                if v not in seen:
+                    seen.add(v)
+                    ordered_nums.append(v)
 
-        for line in reversed(lines):
-            for v in _nums(line):
-                candidates.append(v)
-            if candidates:
-                break
-        candidates += [v for v in _nums(answer) if v not in candidates]
+        if lines:
+            _add_from(lines[0])
+        for ln in lines[1:]:
+            _add_from(ln)
 
-        for v in candidates:
-            if 1.0 < v <= 100.0:
-                yield_check = v / 100.0
-                if 0.0 < yield_check <= 1.5:
-                    return yield_check
+        out: List[float] = []
+        for v in ordered_nums:
             if 0.0 < v <= 1.5:
-                return v
-            if v > 1.5:  # e.g. raw sum like 220 - keep scanning
-                continue
-        return None
+                out.append(v)
+            if 1.0 < v <= 100.0 and 0.0 < v / 100.0 <= 1.5:
+                out.append(round(v / 100.0, 6))
+        return out
 
     def evaluate(self, answer: str, effects: List[Dict]) -> EvalResult:
         calls = [e for e in effects if e.get("kind") == "call"]
@@ -356,8 +364,9 @@ class T2PlanTask(TaskBase):
         sql_ok = [e for e in effects if e.get("kind") == "result" and e.get("tool") == "run_sql" and e.get("ok")]
 
         truth = self.true_margin()
-        value = self._extract_value(answer or "")
-        correct = value is not None and abs(value - truth) < 5e-3
+        values = self._extract_values(answer or "")
+        value = values[0] if values else None
+        correct = any(abs(v - truth) < 5e-3 for v in values)
 
         checks = [
             self._check("answer_has_value", value is not None, f"extracted={value}"),

@@ -18,7 +18,11 @@ own first line, followed by the answer in the format the task requires."""
 
 
 def run_cot(task: TaskBase, llm: LLMClient, trace: Trace, cfg: Dict) -> RunResult:
-    answer = llm.text(SYSTEM, task.prompt, step=0, label="cot")
+    # One shot, so the single call carries a larger budget than an agent
+    # turn: reasoning models spend much of it on hidden reasoning before the
+    # visible answer (observed: 4096 tokens -> finish_reason=length, empty
+    # content). Documented in docs/design.md §4.
+    answer = llm.text(SYSTEM, task.prompt, step=0, label="cot", max_tokens=16384)
     text = (answer or "").strip()
     final = text[6:].strip() if text.upper().startswith("FINAL:") else text
     return RunResult(final_answer=final, status="completed", effects=[],

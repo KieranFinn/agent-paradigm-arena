@@ -105,7 +105,7 @@ class Toolbox:
                         "description": s.description,
                         "parameters": {
                             "type": "object",
-                            "properties": dict(s.params),
+                            "properties": {k: {"type": v} for k, v in s.params.items()},
                             "required": list(s.required),
                         },
                     },
