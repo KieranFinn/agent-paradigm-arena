@@ -1,0 +1,3 @@
+# Zero heavy dependencies by design: no LangChain / LlamaIndex.
+# The openai SDK is OPTIONAL; without it llm.py falls back to stdlib urllib.
+# openai>=1.30.0

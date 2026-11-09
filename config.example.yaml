@@ -1,0 +1,40 @@
+# Agent Paradigm Arena configuration.
+# Two-level YAML subset only (top-level key -> one nested level of scalars).
+
+llm:
+  base_url: https://api.deepseek.com
+  model: deepseek-chat
+  temperature: 0
+  max_tokens: 4096
+  request_timeout_s: 180
+  # prices in CNY per 1M tokens (DeepSeek style; adjust when switching provider)
+  price_input_cached: 0.2
+  price_input: 2.0
+  price_output: 8.0
+
+models:
+  main: deepseek-chat
+  strong: deepseek-reasoner
+
+defaults:
+  repeats: 10
+  max_steps: 40
+  max_llm_calls: 60
+
+plan:
+  max_steps: 8
+  max_step_turns: 8
+  max_replans: 3
+  replan_scope: local
+
+reflexion:
+  max_epochs: 4
+  memory_size: 3
+  evaluator: strict
+
+budget:
+  max_cny_per_run: 500
+
+cache:
+  enabled: false
+  path: .cache/llm_audit.jsonl
