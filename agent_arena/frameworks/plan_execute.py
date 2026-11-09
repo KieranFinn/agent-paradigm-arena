@@ -161,17 +161,29 @@ def _validate_steps(raw, valid_ids: Optional[Set[int]], max_steps: int) -> List[
               depends_on=[d for d in deps if d != sid and d in all_ids])
         for sid, goal, hint, deps in candidates
     ]
-    # cycle check
-    by_id = {s.id: s for s in steps}
-    for s in steps:
-        stack, seen_walk = [s.id], set()
-        while stack:
-            cur = stack.pop()
-            if cur in seen_walk:
-                raise ValueError(f"dependency cycle at step {cur}")
-            seen_walk.add(cur)
-            stack.extend(d for d in by_id.get(cur, PStep(0, "")).depends_on if d in by_id)
+    # cycle check - 3-colour DFS: a DAG diamond (two paths reaching one node)
+    # is NOT a cycle; only a back-edge to a node on the current path is
+    if _has_cycle(steps):
+        raise ValueError("dependency cycle in plan")
     return steps
+
+
+def _has_cycle(steps: List[PStep]) -> bool:
+    by_id = {s.id: s for s in steps}
+    WHITE, GRAY, BLACK = 0, 1, 2
+    color = {sid: WHITE for sid in by_id}
+
+    def visit(sid: int) -> bool:
+        if color.get(sid) != WHITE:
+            return color[sid] == GRAY
+        color[sid] = GRAY
+        for d in by_id[sid].depends_on:
+            if d in by_id and visit(d):
+                return True
+        color[sid] = BLACK
+        return False
+
+    return any(visit(sid) for sid in by_id)
 
 
 def _downstream(steps: List[PStep], ids: Set[int]) -> Set[int]:

@@ -1,0 +1,92 @@
+== batch main_20261109-134242: 240 runs, model=deepseek-flash, jobs=4 ==
+[1/240] react_T1_easy_r1: ok=True cost=0.0381 lat=37.1s llm=10 peak=5262 
+[2/240] react_T1_easy_r0: ok=True cost=0.0475 lat=46.8s llm=11 peak=5922 
+[3/240] react_T1_easy_r2: ok=True cost=0.0513 lat=52.0s llm=11 peak=6404 
+[4/240] react_T1_easy_r3: ok=True cost=0.0854 lat=82.0s llm=18 peak=8733 
+[5/240] react_T1_easy_r6: ok=True cost=0.0323 lat=31.6s llm=9 peak=4480 
+[6/240] react_T1_easy_r5: ok=True cost=0.0429 lat=40.3s llm=11 peak=5626 
+[7/240] react_T1_easy_r8: ok=True cost=0.0419 lat=39.9s llm=12 peak=5700 
+[8/240] react_T1_easy_r9: ok=True cost=0.0305 lat=33.2s llm=9 peak=5490 
+[9/240] react_T1_easy_r4: ok=True cost=0.1023 lat=96.2s llm=19 peak=10952 
+[10/240] react_T1_easy_r7: ok=True cost=0.0523 lat=60.6s llm=9 peak=7887 
+[11/240] react_T1_hard_r1: ok=True cost=0.0329 lat=34.6s llm=9 peak=5810 
+[12/240] react_T1_hard_r2: ok=True cost=0.0467 lat=50.2s llm=12 peak=7208 
+[13/240] react_T1_hard_r0: ok=True cost=0.0701 lat=64.1s llm=17 peak=7700 
+[14/240] react_T1_hard_r4: ok=True cost=0.0321 lat=32.9s llm=11 peak=5535 
+[15/240] react_T1_hard_r3: ok=True cost=0.0451 lat=50.3s llm=10 peak=6998 
+[16/240] react_T1_hard_r6: ok=True cost=0.0321 lat=33.0s llm=12 peak=5668 
+[17/240] react_T1_hard_r5: ok=True cost=0.0448 lat=45.3s llm=14 peak=6908 
+[18/240] react_T2_easy_r0: ok=True cost=0.0264 lat=27.6s llm=8 peak=3453 
+[19/240] react_T2_easy_r1: ok=True cost=0.0158 lat=19.0s llm=6 peak=2980 
+[20/240] react_T1_hard_r9: ok=True cost=0.0540 lat=54.8s llm=14 peak=6555 
+[21/240] react_T2_easy_r2: ok=True cost=0.0233 lat=25.2s llm=7 peak=3109 
+[22/240] react_T2_easy_r3: ok=True cost=0.0255 lat=26.7s llm=8 peak=3342 
+[23/240] react_T2_easy_r4: ok=True cost=0.0187 lat=20.1s llm=6 peak=2779 
+[24/240] react_T1_hard_r7: ok=True cost=0.1197 lat=129.9s llm=18 peak=15270 
+[25/240] react_T2_easy_r5: ok=True cost=0.0188 lat=20.3s llm=7 peak=2853 
+[26/240] react_T1_hard_r8: ok=True cost=0.1206 lat=120.9s llm=22 peak=14476 
+[27/240] react_T2_easy_r7: ok=True cost=0.0146 lat=17.1s llm=7 peak=2730 
+[28/240] react_T2_easy_r6: ok=True cost=0.0259 lat=27.3s llm=8 peak=3471 
+[29/240] react_T2_easy_r8: ok=True cost=0.0170 lat=21.0s llm=6 peak=3189 
+[30/240] react_T2_easy_r9: ok=True cost=0.0239 lat=25.6s llm=7 peak=3093 
+[31/240] react_T2_hard_r0: ok=True cost=0.0285 lat=29.8s llm=8 peak=3592 
+[32/240] react_T2_hard_r1: ok=True cost=0.0260 lat=25.8s llm=8 peak=3616 
+[33/240] react_T2_hard_r2: ok=True cost=0.0272 lat=28.0s llm=7 peak=3848 
+[34/240] react_T2_hard_r3: ok=True cost=0.0169 lat=20.5s llm=6 peak=3346 
+[35/240] react_T2_hard_r5: ok=True cost=0.0273 lat=28.4s llm=8 peak=3756 
+[36/240] react_T2_hard_r4: ok=True cost=0.0286 lat=30.1s llm=7 peak=3903 
+[37/240] react_T2_hard_r7: ok=True cost=0.0249 lat=26.1s llm=7 peak=3436 
+[38/240] react_T2_hard_r8: ok=True cost=0.0188 lat=22.3s llm=7 peak=3594 
+[39/240] react_T3_easy_r0: ok=True cost=0.0110 lat=15.3s llm=2 peak=1923 
+[40/240] react_T2_hard_r9: ok=True cost=0.0205 lat=21.7s llm=6 peak=3080 
+[41/240] react_T2_hard_r6: ok=True cost=0.0466 lat=50.8s llm=9 peak=5710 
+[42/240] react_T3_easy_r1: ok=True cost=0.0107 lat=15.2s llm=2 peak=1938 
+[43/240] react_T3_easy_r4: ok=True cost=0.0087 lat=12.0s llm=2 peak=1660 
+[44/240] react_T3_easy_r2: ok=True cost=0.0108 lat=15.0s llm=2 peak=1917 
+[45/240] react_T3_easy_r3: ok=True cost=0.0148 lat=20.9s llm=2 peak=2419 
+[46/240] react_T3_easy_r5: ok=True cost=0.0116 lat=16.5s llm=2 peak=1942 
+[47/240] react_T3_easy_r7: ok=True cost=0.0136 lat=19.2s llm=2 peak=2250 
+[48/240] react_T3_easy_r6: ok=True cost=0.0143 lat=20.4s llm=2 peak=2256 
+[49/240] react_T3_easy_r8: ok=True cost=0.0095 lat=13.2s llm=2 peak=1744 
+[50/240] react_T3_easy_r9: ok=True cost=0.0121 lat=16.9s llm=2 peak=2052 
+[51/240] react_T3_hard_r1: ok=True cost=0.0306 lat=43.0s llm=2 peak=4225 
+[52/240] react_T3_hard_r3: ok=True cost=0.0238 lat=34.4s llm=2 peak=3511 
+[53/240] react_T3_hard_r4: ok=True cost=0.0080 lat=11.1s llm=2 peak=1398 
+[54/240] react_T3_hard_r6: ok=True cost=0.0254 lat=36.7s llm=2 peak=3771 
+[55/240] react_T3_hard_r5: ok=True cost=0.0428 lat=60.1s llm=3 peak=5414 
+[56/240] react_T3_hard_r8: ok=True cost=0.0238 lat=34.3s llm=2 peak=3559 
+[57/240] react_T3_hard_r0: ok=True cost=0.0963 lat=141.0s llm=4 peak=4142 
+[58/240] react_T3_hard_r2: ok=True cost=0.1149 lat=166.7s llm=5 peak=5402 
+[59/240] plan_execute_T1_easy_r1: ok=False cost=0.0064 lat=9.5s llm=1 peak=532 (harness_error)
+[60/240] react_T3_hard_r9: ok=True cost=0.0301 lat=43.4s llm=2 peak=4323 
+[61/240] plan_execute_T1_easy_r2: ok=False cost=0.0164 lat=24.5s llm=1 peak=532 (harness_error)
+[62/240] react_T3_hard_r7: ok=True cost=0.0882 lat=129.9s llm=4 peak=3320 
+  !! plan_execute_T1_easy_r5 raised: ValueError: dependency cycle at step 7
+Traceback (most recent call last):
+  File "/Users/kieransworkstation/Desktop/workspace/AI Agent/run_benchmark.py", line 169, in run_one
+    outcome = FRAMEWORKS[agent](task, llm, trace, cfg)
+  File "/Users/kieransworkstation/Desktop/workspace/AI Agent/agent_arena/frameworks/plan_execute.py", line 342, in run_plan_execute
+    steps, replans = _replan(task, llm, trace, cfg, steps, tools_brief, scope, replans)
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kieransworkstation/Desktop/workspace/AI Agent/agent_arena/frameworks/plan_execute.py", line 400, in _replan
+    new_steps = _planner_json(llm, trace, _fmt(REPLAN_LOCAL_SYSTEM, next_id=next_id),
+                              user, f"plan.replan{replans + 1}",
+                              {s.id for s in kept} | {s.id for s in steps if s.id in failed_ids},
+                              int(cfg["plan"]["max_steps"]))
+  File "/Users/kieransworkstation/Desktop/workspace/AI Agent/agent_arena/frameworks/plan_execute.py", line 213, in _planner_json
+    return _validate_steps(raw, valid_ids, max_steps)
+ValueError: dependency cycle at step 7
+
+[63/240] plan_execute_T1_easy_r5: ok=False cost=0.1276 lat=136.3s llm=26 peak=5306 (harness_error)
+[64/240] plan_execute_T1_easy_r3: ok=True cost=0.1710 lat=182.4s llm=43 peak=4961 
+[65/240] plan_execute_T1_easy_r4: ok=True cost=0.1647 lat=173.9s llm=37 peak=6436 
+[66/240] plan_execute_T1_easy_r8: ok=False cost=0.0086 lat=12.8s llm=1 peak=532 (harness_error)
+[67/240] plan_execute_T1_easy_r6: ok=True cost=0.1126 lat=116.6s llm=35 peak=4458 
+[68/240] plan_execute_T1_easy_r0: ok=True cost=0.2490 lat=287.6s llm=41 peak=7429 
+[69/240] plan_execute_T1_hard_r0: ok=False cost=0.0094 lat=14.0s llm=1 peak=532 (harness_error)
+[70/240] plan_execute_T1_easy_r7: ok=True cost=0.1485 lat=152.4s llm=36 peak=5750 
+[71/240] plan_execute_T1_easy_r9: ok=True cost=0.1219 lat=125.2s llm=33 peak=5912 
+[72/240] plan_execute_T1_hard_r3: ok=False cost=0.0061 lat=9.0s llm=1 peak=532 (harness_error)
+[73/240] plan_execute_T1_hard_r4: ok=False cost=0.0071 lat=10.5s llm=1 peak=532 (harness_error)
+[74/240] plan_execute_T1_hard_r1: ok=True cost=0.1304 lat=134.2s llm=34 peak=5259 
+[75/240] plan_execute_T1_hard_r2: ok=True cost=0.1703 lat=202.4s llm=34 peak=6749 
