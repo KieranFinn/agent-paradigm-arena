@@ -1,0 +1,21 @@
+== batch m2-cot_20261109-143143: 18 runs, model=deepseek-flash, jobs=4 ==
+[1/18] cot_T1_easy_r0: ok=False cost=0.0610 lat=91.2s llm=1 peak=236 (tests_never_run)
+[2/18] cot_T1_hard_r0: ok=False cost=0.0721 lat=107.9s llm=1 peak=236 (tests_never_run)
+[3/18] cot_T1_easy_r1: ok=False cost=0.0798 lat=119.4s llm=1 peak=236 (tests_never_run)
+[4/18] cot_T1_easy_r2: ok=False cost=0.1054 lat=157.8s llm=1 peak=236 (tests_never_run)
+[5/18] cot_T1_hard_r2: ok=False cost=0.0682 lat=102.0s llm=1 peak=236 (tests_never_run)
+[6/18] cot_T2_easy_r0: ok=False cost=0.0687 lat=103.0s llm=1 peak=269 (no_value_in_answer)
+[7/18] cot_T2_easy_r1: ok=False cost=0.0585 lat=87.8s llm=1 peak=269 (no_value_in_answer)
+[8/18] cot_T2_hard_r0: ok=False cost=0.0075 lat=11.2s llm=1 peak=269 (no_value_in_answer)
+[9/18] cot_T2_hard_r1: ok=False cost=0.0195 lat=29.3s llm=1 peak=269 (no_value_in_answer)
+[10/18] cot_T1_hard_r1: ok=False cost=0.1176 lat=176.2s llm=1 peak=236 (tests_never_run)
+[11/18] cot_T2_hard_r2: ok=False cost=0.0218 lat=32.7s llm=1 peak=269 (no_value_in_answer)
+[12/18] cot_T3_easy_r0: ok=True cost=0.0145 lat=21.3s llm=1 peak=328 
+[13/18] cot_T2_easy_r2: ok=False cost=0.0512 lat=76.8s llm=1 peak=269 (no_sql_executed)
+[14/18] cot_T3_easy_r1: ok=True cost=0.0191 lat=28.4s llm=1 peak=328 
+[15/18] cot_T3_easy_r2: ok=True cost=0.0179 lat=26.6s llm=1 peak=328 
+[16/18] cot_T3_hard_r1: ok=True cost=0.0811 lat=121.5s llm=1 peak=407 
+[17/18] cot_T3_hard_r2: ok=True cost=0.1014 lat=152.1s llm=1 peak=407 
+[18/18] cot_T3_hard_r0: ok=True cost=0.1094 lat=163.3s llm=1 peak=407 
+== done: 18/18 runs in 4.4 min, cost 1.0747 CNY, ok 6/18 ==
+reports: /Users/kieransworkstation/Desktop/workspace/AI Agent/runs/m2-cot_20261109-143143/report.md

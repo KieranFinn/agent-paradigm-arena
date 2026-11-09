@@ -6,9 +6,11 @@
 > and replayable failures for every claim.
 
 Companion experiment repo for the blog post
-《ReAct / Plan-and-Execute / Reflexion：三种 Agent 范式的优缺点》.
+《当模型足够强，范式还剩下什么？——ReAct / Plan-and-Execute / Reflexion 的 123 次真实运行对照实验》
+(**[docs/blog.md](docs/blog.md)**, Chinese).
 Every number in the article traces back to a concrete event sequence under
-`runs/<batch>/traces/`.
+`runs/<batch>/traces/`; the merged evidence tables live in
+[`runs/_merged/`](runs/_merged/report.md).
 
 ## What's inside
 

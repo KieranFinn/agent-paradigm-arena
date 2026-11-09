@@ -2,6 +2,10 @@ __pycache__/
 *.py[cod]
 .env
 .cache/
-runs/
+runs/*
+!runs/_merged/
+runs/_merged/*
+!runs/_merged/report.md
+!runs/_merged/report.csv
 .DS_Store
 .venv/

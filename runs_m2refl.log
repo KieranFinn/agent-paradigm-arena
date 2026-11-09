@@ -1,0 +1,21 @@
+== batch m2-refl_20261109-142417: 18 runs, model=deepseek-flash, jobs=4 ==
+[1/18] reflexion_T1_easy_r1: ok=True cost=0.0507 lat=45.8s llm=13 peak=6659 
+[2/18] reflexion_T1_easy_r0: ok=True cost=0.0469 lat=45.5s llm=15 peak=6882 
+[3/18] reflexion_T1_hard_r0: ok=True cost=0.0516 lat=56.1s llm=12 peak=7533 
+[4/18] reflexion_T1_easy_r2: ok=True cost=0.0599 lat=60.0s llm=13 peak=7507 
+[5/18] reflexion_T2_easy_r0: ok=True cost=0.0150 lat=16.5s llm=6 peak=2493 
+[6/18] reflexion_T2_easy_r1: ok=True cost=0.0249 lat=27.2s llm=8 peak=3551 
+[7/18] reflexion_T1_hard_r1: ok=True cost=0.0445 lat=40.3s llm=11 peak=5956 
+[8/18] reflexion_T2_easy_r2: ok=True cost=0.0218 lat=24.7s llm=6 peak=3101 
+[9/18] reflexion_T1_hard_r2: ok=True cost=0.0605 lat=61.1s llm=12 peak=7646 
+[10/18] reflexion_T2_hard_r0: ok=True cost=0.0290 lat=30.9s llm=8 peak=3803 
+[11/18] reflexion_T2_hard_r1: ok=True cost=0.0287 lat=30.6s llm=7 peak=4149 
+[12/18] reflexion_T2_hard_r2: ok=True cost=0.0215 lat=26.7s llm=7 peak=3766 
+[13/18] reflexion_T3_easy_r0: ok=True cost=0.0095 lat=13.2s llm=2 peak=1762 
+[14/18] reflexion_T3_easy_r2: ok=True cost=0.0074 lat=10.4s llm=2 peak=1551 
+[15/18] reflexion_T3_easy_r1: ok=True cost=0.0189 lat=27.0s llm=2 peak=2906 
+[16/18] reflexion_T3_hard_r0: ok=True cost=0.0344 lat=49.6s llm=2 peak=4864 
+[17/18] reflexion_T3_hard_r1: ok=True cost=0.0459 lat=64.5s llm=3 peak=6002 
+[18/18] reflexion_T3_hard_r2: ok=True cost=0.0334 lat=48.4s llm=2 peak=4768 
+== done: 18/18 runs in 1.8 min, cost 0.6045 CNY, ok 18/18 ==
+reports: /Users/kieransworkstation/Desktop/workspace/AI Agent/runs/m2-refl_20261109-142417/report.md
